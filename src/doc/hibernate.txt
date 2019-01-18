@@ -1,0 +1,27 @@
+-> @Proxy(lazy=false) will disable the default lazy loading for a particular entity. This means you always get 	
+       the initialized entity whenever this entity is being referenced from other entity.
+-> @Type(type = "yes_no"): We use Hibernate's @Type annotation to represent true & false as Y & N within the database field.
+-> @JoinTable
+   @JoinColumn
+   @GeneratedValue(generator = "uuid")
+	   
+	   
+=============== Q&A ==============
+Q) What is the difference between cascade and orphan removal from DB?
+	@OneToMany(cascade=REMOVE, mappedBy="customer") and
+	@OneToMany(mappedBy="customer", orphanRemoval="true")
+	   
+Q) What is mappedby attribute in hibernate mapping?
+Ans: 
+	
+Q) Throwing error while saving multiple oneToMany Entity relations in Hibernate?
+	Error:
+	Caused by: java.sql.SQLException: Field 'messagingSessions_id' doesn't have a default value
+	Stack overflow link:  https://stackoverflow.com/questions/54247972/throwing-error-while-saving-multiple-onetomany-entity-relations-in-hibernate
+Ans:	
+	
+Q) What is the use of @GeneratedValue(generator = "uuid")?
+Ans: 
+
+----------- To test
+-> to operate with orphanRemoval attribute and without it and cascade type all

@@ -1,0 +1,62 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <groupId>com.learn</groupId>
+  <artifactId>hibernateproj</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <packaging>jar</packaging>
+
+  <name>hibernateproj</name>
+  <url>http://maven.apache.org</url>
+
+  <properties>
+	    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+	    <jersey.version>2.16</jersey.version>
+	    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+	    <springframework.version>4.3.7.RELEASE</springframework.version>
+	    <munsiji-version>0.0.1-SNAPSHOT</munsiji-version>
+	    <springsecurity.version>4.2.4.RELEASE</springsecurity.version>
+	    <spring.batch.version>4.0.0.RELEASE</spring.batch.version>
+  </properties>
+
+  <dependencies>
+     <!-- https://mvnrepository.com/artifact/org.hibernate/hibernate-core -->
+    <dependency>
+	    <groupId>org.hibernate</groupId>
+	    <artifactId>hibernate-core</artifactId>
+	    <version>5.0.0.Final</version>
+	</dependency>
+	<!-- https://mvnrepository.com/artifact/mysql/mysql-connector-java -->
+	<dependency>
+	    <groupId>mysql</groupId>
+	    <artifactId>mysql-connector-java</artifactId>
+	    <!-- <version>6.0.4</version> -->
+	    <version>8.0.11</version>
+	</dependency>
+	<dependency>
+      <groupId>org.apache.commons</groupId>
+      <artifactId>commons-dbcp2</artifactId>
+      <version>2.1.1</version>
+    </dependency>
+	<dependency>
+	  <groupId>javax.transaction</groupId>
+	  <artifactId>jta</artifactId>
+	  <version>1.1</version>
+	</dependency>
+	<!-- https://mvnrepository.com/artifact/com.fasterxml.jackson.core/jackson-core -->
+<dependency>
+    <groupId>com.fasterxml.jackson.core</groupId>
+    <artifactId>jackson-core</artifactId>
+    <version>2.9.8</version>
+</dependency>
+<!-- https://mvnrepository.com/artifact/com.fasterxml.jackson.core/jackson-annotations -->
+<dependency>
+    <groupId>com.fasterxml.jackson.core</groupId>
+    <artifactId>jackson-annotations</artifactId>
+    <version>2.9.8</version>
+</dependency>
+
+	
+  </dependencies>
+</project>
