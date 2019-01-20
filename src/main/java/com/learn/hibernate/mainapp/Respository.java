@@ -8,6 +8,7 @@ import org.hibernate.Session;
 import com.learn.hibernate.entity.inheritance.MessagingConfigEntity;
 import com.learn.hibernate.entity.inheritance.MessagingEnablerCfg;
 import com.learn.hibernate.entity.inheritance.MessagingSessionCfg;
+import com.learn.hibernate.util.HibernateUtil;
 
 public class Respository extends HibernateUtil{
 	Respository(){

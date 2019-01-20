@@ -1,4 +1,4 @@
-package com.learn.hibernate.mainapp;
+package com.learn.hibernate.util;
 
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
@@ -11,9 +11,9 @@ import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
 public class HibernateUtil {
 	  StandardServiceRegistry ssr = null;
 	  Metadata meta = null;
-	  SessionFactory factory = null;
+	 public SessionFactory factory = null;
 	  Session session = null;
-	  Transaction t = null;
+	 public Transaction t = null;
 	
 	public HibernateUtil(){
 		ssr = new StandardServiceRegistryBuilder().configure("hibernate.cfg.xml").build();		

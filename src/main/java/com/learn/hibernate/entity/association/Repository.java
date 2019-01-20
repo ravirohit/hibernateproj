@@ -2,7 +2,7 @@ package com.learn.hibernate.entity.association;
 
 import org.hibernate.Session;
 
-import com.learn.hibernate.mainapp.HibernateUtil;
+import com.learn.hibernate.util.HibernateUtil;
 
 public class Repository extends HibernateUtil{
 	
