@@ -35,16 +35,9 @@ public class MessagingEnablerCfg extends MessagingConfigEntity {
 	
 	
 	@OneToMany(cascade = { CascadeType.ALL}, orphanRemoval = true, fetch = FetchType.EAGER)
-	@JoinTable(inverseJoinColumns=@JoinColumn(name="profile-Id", nullable = true, referencedColumnName = "profileId"))
-	//@JoinColumn(name = "serviceName",nullable = true)
-	//@JsonInclude(JsonInclude.Include.NON_EMPTY)
 	private Set<MessagingProfileCfg> messagingProfiles = new HashSet<>();
 	
-	//@OneToMany(cascade = { CascadeType.ALL}, orphanRemoval = true, fetch = FetchType.EAGER)
-	@JoinTable(inverseJoinColumns=@JoinColumn(name="session-Name", nullable = true, referencedColumnName = "sessionName")) //, referencedColumnName = "sessionName"
 	@OneToMany(cascade = { CascadeType.ALL}, orphanRemoval = true, fetch = FetchType.EAGER)
-	//@JoinColumn(name = "serviceName",nullable = true)
-    //@JsonInclude(JsonInclude.Include.NON_EMPTY)
     private Set<MessagingSessionCfg> messagingSessions  = new HashSet<>();
 	
 	public MessagingEnablerCfg(){

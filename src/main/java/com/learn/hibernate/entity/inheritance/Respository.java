@@ -1,13 +1,10 @@
-package com.learn.hibernate.mainapp;
+package com.learn.hibernate.entity.inheritance;
 
 import java.util.List;
 
 import org.hibernate.Query;
 import org.hibernate.Session;
 
-import com.learn.hibernate.entity.inheritance.MessagingConfigEntity;
-import com.learn.hibernate.entity.inheritance.MessagingEnablerCfg;
-import com.learn.hibernate.entity.inheritance.MessagingSessionCfg;
 import com.learn.hibernate.util.HibernateUtil;
 
 public class Respository extends HibernateUtil{
@@ -16,11 +13,11 @@ public class Respository extends HibernateUtil{
 	}
 	
 	public void saveUpdateMessagingSession(MessagingEnablerCfg e){
-		System.out.println("saving");
+
 		Session session = getSession();
  	    session.saveOrUpdate(e);;  
  	    t.commit();
- 	    System.out.println("saved");
+
  	    session.close();
 		
 	} 
