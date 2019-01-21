@@ -5,7 +5,7 @@
 <hibernate-configuration>  
     <session-factory>  
             
-    <property name="hbm2ddl.auto">create</property>    
+    <property name="hbm2ddl.auto">update</property>    
         <property name="dialect">org.hibernate.dialect.MySQLDialect</property>    
         <property name="connection.url">jdbc:mysql://localhost:3306/sys</property>    
         <property name="connection.username">root</property>    
@@ -18,11 +18,17 @@
         <mapping class="com.learn.hibernate.entity.inheritance.MessagingConfigEntity"/>
         <mapping class="com.learn.hibernate.entity.inheritance.MessagingProfileCfg"/> 
 
-        <!-- inheritance and association-->
+        <!-- single table inheritance and association-->
         <mapping class="com.learn.hibernate.singleTableInheritance.MyProduct"/>
         <mapping class="com.learn.hibernate.singleTableInheritance.Book"/>
         <mapping class="com.learn.hibernate.singleTableInheritance.Pen"/>
         <mapping class="com.learn.hibernate.singleTableInheritance.ManageProduct"/>
+        
+        <!-- multi table inheritance and association-->
+       <!--  <mapping class="com.learn.hibernate.multiTableInheritance.MyProduct"/>
+        <mapping class="com.learn.hibernate.multiTableInheritance.Book"/>
+        <mapping class="com.learn.hibernate.multiTableInheritance.Pen"/>
+        <mapping class="com.learn.hibernate.multiTableInheritance.ManageProduct"/> -->
 
         <!-- Association -->
         <mapping class="com.learn.hibernate.entity.association.Employee"/>

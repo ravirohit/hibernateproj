@@ -1,4 +1,4 @@
-package com.learn.hibernate.singleTableInheritance;
+package com.learn.hibernate.multiTableInheritance;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -9,8 +9,8 @@ import javax.persistence.MappedSuperclass;
 
 import org.hibernate.annotations.GenericGenerator;
 
-@Entity
-//@MappedSuperclass
+//@Entity
+@MappedSuperclass
 @Inheritance(strategy = InheritanceType.SINGLE_TABLE)
 public class MyProduct {
 	@Id

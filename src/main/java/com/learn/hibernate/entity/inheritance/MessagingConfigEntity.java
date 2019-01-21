@@ -15,9 +15,9 @@ import com.fasterxml.jackson.annotation.JsonAutoDetect;
 import com.fasterxml.jackson.annotation.JsonAutoDetect.Visibility;
 import com.fasterxml.jackson.annotation.JsonInclude;
 
-//@Entity
+@Entity
 //@Indexed
-@MappedSuperclass
+//@MappedSuperclass
 @Proxy(lazy=false)
 @Inheritance(strategy = InheritanceType.SINGLE_TABLE)
 @JsonInclude(JsonInclude.Include.NON_NULL)

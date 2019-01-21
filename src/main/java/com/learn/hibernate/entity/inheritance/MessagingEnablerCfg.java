@@ -35,9 +35,11 @@ public class MessagingEnablerCfg extends MessagingConfigEntity {
 	
 	
 	@OneToMany(cascade = { CascadeType.ALL}, orphanRemoval = true, fetch = FetchType.EAGER)
+	@JoinColumn(nullable=true) 
 	private Set<MessagingProfileCfg> messagingProfiles = new HashSet<>();
 	
 	@OneToMany(cascade = { CascadeType.ALL}, orphanRemoval = true, fetch = FetchType.EAGER)
+	@JoinColumn(nullable=true) 
     private Set<MessagingSessionCfg> messagingSessions  = new HashSet<>();
 	
 	public MessagingEnablerCfg(){
@@ -76,6 +78,12 @@ public class MessagingEnablerCfg extends MessagingConfigEntity {
     public void addProfile(MessagingProfileCfg profile){
     	messagingProfiles.add(profile);
     	
+    }
+    public void removeSession(String sessionName){
+    	messagingSessions.removeIf(s -> s.getSessionName().equals(sessionName));
+    }
+    public void removeProfile(String profileId){
+    	messagingProfiles.removeIf(p -> p.getProfileId().equals(profileId));
     }
 	
 	
